@@ -3,7 +3,9 @@ package com.techtonic.springdemo.dto;
 import com.opencsv.bean.CsvBindByName;
 
 public class Row {
-
+	
+	//The annotation @CsvBindByName maps the variable
+	//to the column name
 	@CsvBindByName
 	private String state;
 	
@@ -15,12 +17,13 @@ public class Row {
 	
 	@CsvBindByName
 	private String party;
-	
+	//column=total_votes value is set explicitly as 
+	//the variable name is not the same as column name
 	@CsvBindByName(column="total_votes")
 	private int totalVotes;
 	
 	@CsvBindByName
-	private boolean won;
+	private String won;
 
 	public String getState() {
 		return state;
@@ -62,11 +65,11 @@ public class Row {
 		this.totalVotes = totalVotes;
 	}
 
-	public boolean isWon() {
+	public String getWon() {
 		return won;
 	}
 
-	public void setWon(boolean won) {
+	public void setWon(String won) {
 		this.won = won;
 	}
 

@@ -19,6 +19,11 @@ public class CSVParserUtility {
 
 	public static final Logger LOG = LoggerFactory.getLogger(CSVParserUtility.class);
 
+	/**
+	 * Maps rows in a csv with the fields marked in the Row Class
+	 * @param file
+	 * @return
+	 */
 	@SuppressWarnings("rawtypes")
 	public static final List<Row> parseCSVToRow(File file) {
 
